@@ -1,4 +1,4 @@
-package com.chinaex123.all_apples.dataGen;
+package com.chinaex123.all_apples.data;
 
 import com.chinaex123.all_apples.AllApples;
 import net.minecraft.core.HolderLookup;
@@ -23,7 +23,8 @@ public class ModDataGenerator {
 
 //        generator.addProvider(event.includeServer(), new ModRecipesProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeClient(), new ModItemModelsProvider(packOutput, event.getExistingFileHelper()));
-//        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, CompletableFuture.completedFuture(TagsProvider.TagLookup.empty()), existingFileHelper));
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider,
+                CompletableFuture.completedFuture(TagsProvider.TagLookup.empty()), existingFileHelper));
 
     }
 }
