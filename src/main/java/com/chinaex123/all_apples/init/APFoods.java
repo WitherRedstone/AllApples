@@ -53,11 +53,11 @@ public interface APFoods {
     );
     /** 附魔下界合金苹果 */
     FoodProperties ENCHANTED_NETHERITE_APPLE = FoodBuilderHelper.simpleAlwaysEdible(12, 1.5f,
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 240, 0), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 240, 1), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 240, 0), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 240, 1), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 240, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 360, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 360, 1), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 360, 1), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 360, 2), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 360, 1), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.SATURATION, 20 * 90, 0), 1.0f)
     );
     /** 绿宝石苹果 */
@@ -147,7 +147,7 @@ public interface APFoods {
             EffectPair.of(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 20 * 150, 0), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 30, 0), 1.0f)
     );
-    /** 下界石英苹果 */
+    /** 石英苹果 */
     FoodProperties QUARTZ_APPLE = FoodBuilderHelper.simpleAlwaysEdible(4, 1.2f,
             EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 60, 0), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 5, 0), 1.0f)

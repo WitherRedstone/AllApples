@@ -68,7 +68,7 @@ public interface APItems {
     DeferredItem<Item> HONEYCOMB_APPLE = ITEMS.register("honeycomb_apple", () -> new Item(new Item.Properties().food(APFoods.HONEYCOMB_APPLE)));
     /** 幽匿苹果 */
     DeferredItem<Item> SCULK_APPLE = ITEMS.register("sculk_apple", () -> new Item(new Item.Properties().food(APFoods.SCULK_APPLE)));
-    /** 下界石英苹果 */
+    /** 石英苹果 */
     DeferredItem<Item> QUARTZ_APPLE = ITEMS.register("quartz_apple", () -> new Item(new Item.Properties().food(APFoods.QUARTZ_APPLE)));
     /** 沉重苹果 */
     DeferredItem<Item> HEAVY_APPLE = ITEMS.register("heavy_apple", () -> new Item(new Item.Properties().food(APFoods.HEAVY_APPLE)));
