@@ -1,6 +1,9 @@
 package com.chinaex123.all_apples.init;
 
 import com.chinaex123.all_apples.AllApples;
+import com.chinaex123.all_apples.config.CommonConfig;
+import com.chinaex123.all_apples.item.AmethystAppleItem;
+import com.chinaex123.all_apples.item.EnderAppleItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -45,9 +48,9 @@ public interface APItems {
     /** 附魔红石苹果 */
     DeferredItem<Item> ENCHANTED_REDSTONE_APPLE = createEnchantedItem("enchanted_redstone_apple", APFoods.ENCHANTED_REDSTONE_APPLE, Rarity.RARE);
     /** 紫水晶苹果 */
-    DeferredItem<Item> AMETHYST_SHARD_APPLE = ITEMS.register("amethyst_shard_apple", () -> new Item(new Item.Properties().food(APFoods.AMETHYST_SHARD_APPLE)));
+    DeferredItem<Item> AMETHYST_SHARD_APPLE = createAmethystApple("amethyst_shard_apple", APFoods.AMETHYST_SHARD_APPLE, CommonConfig.amethystGrowthCount);
     /** 附魔紫水晶苹果 */
-    DeferredItem<Item> ENCHANTED_AMETHYST_SHARD_APPLE = createEnchantedItem("enchanted_amethyst_shard_apple", APFoods.ENCHANTED_AMETHYST_SHARD_APPLE, Rarity.RARE);
+    DeferredItem<Item> ENCHANTED_AMETHYST_SHARD_APPLE = createEnchantedAmethystApple("enchanted_amethyst_shard_apple", APFoods.ENCHANTED_AMETHYST_SHARD_APPLE, CommonConfig.enchantedAmethystGrowthCount);
     /** 黏液苹果 */
     DeferredItem<Item> SLIME_APPLE = ITEMS.register("slime_apple", () -> new Item(new Item.Properties().food(APFoods.SLIME_APPLE)));
     /** 附魔黏液苹果 */
@@ -76,7 +79,7 @@ public interface APItems {
     /** 骨块苹果 */
     DeferredItem<Item> BONE_APPLE = ITEMS.register("bone_apple", () -> new Item(new Item.Properties().food(APFoods.BONE_APPLE)));
     /** 末影苹果 */
-    DeferredItem<Item> ENDER_APPLE = ITEMS.register("ender_apple", () -> new Item(new Item.Properties().food(APFoods.ENDER_APPLE)));
+    DeferredItem<Item> ENDER_APPLE = ITEMS.register("ender_apple", () -> new EnderAppleItem(new Item.Properties().food(APFoods.ENDER_APPLE)));
 
     /**
      * 创建带有附魔光效的物品
@@ -95,6 +98,25 @@ public interface APItems {
      */
     private static DeferredItem<Item> createEnchantedItem(String name, FoodProperties food, Rarity rarity) {
         return ITEMS.register(name, () -> new Item(new Item.Properties().food(food).rarity(rarity)) {
+            @Override
+            public boolean isFoil(ItemStack stack) {
+                return true;
+            }
+        });
+    }
+
+    /**
+     * 创建紫水晶苹果
+     */
+    private static DeferredItem<Item> createAmethystApple(String name, FoodProperties food, java.util.function.Supplier<Integer> countSupplier) {
+        return ITEMS.register(name, () -> new AmethystAppleItem(new Item.Properties().food(food), countSupplier));
+    }
+
+    /**
+     * 创建带有附魔光效和稀有度的紫水晶苹果
+     */
+    private static DeferredItem<Item> createEnchantedAmethystApple(String name, FoodProperties food, java.util.function.Supplier<Integer> countSupplier) {
+        return ITEMS.register(name, () -> new AmethystAppleItem(new Item.Properties().food(food).rarity(Rarity.RARE), countSupplier) {
             @Override
             public boolean isFoil(ItemStack stack) {
                 return true;

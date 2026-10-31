@@ -32,5 +32,9 @@
   "item.all_apples.obsidian_apple": "黑曜石苹果",
   "item.all_apples.crying_obsidian_apple": "哭泣的黑曜石苹果",
   "item.all_apples.bone_apple": "骨块苹果",
-  "item.all_apples.ender_apple": "末影苹果"
+  "item.all_apples.ender_apple": "末影苹果",
+
+  "tooltip.all_apples.amethyst_shard_apple": "食用时看向紫水晶母岩：加速生长",
+  "tooltip.all_apples.enchanted_amethyst_shard_apple": "食用时看向紫水晶母岩：大幅加速生长",
+  "tooltip.all_apples.ender_apple": "食用后向随机方向瞬移"
 }

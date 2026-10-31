@@ -42,6 +42,7 @@ public interface APFoods {
     /** 附魔钻石苹果 */
     FoodProperties ENCHANTED_DIAMOND_APPLE = FoodBuilderHelper.simpleAlwaysEdible(6, 1.5f,
             EffectPair.of(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 20 * 150, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 150, 0), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 40, 0), 1.0f)
     );
     /** 下界合金苹果 */
@@ -52,11 +53,12 @@ public interface APFoods {
     );
     /** 附魔下界合金苹果 */
     FoodProperties ENCHANTED_NETHERITE_APPLE = FoodBuilderHelper.simpleAlwaysEdible(12, 1.5f,
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 210, 0), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 210, 1), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 180, 0), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 120, 1), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 90, 0), 1.0f)
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 240, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 240, 1), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 240, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 240, 1), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 240, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.SATURATION, 20 * 90, 0), 1.0f)
     );
     /** 绿宝石苹果 */
     FoodProperties EMERALD_APPLE = FoodBuilderHelper.simpleAlwaysEdible(6, 1.2f,
@@ -83,7 +85,7 @@ public interface APFoods {
     );
     /** 红石苹果 */
     FoodProperties REDSTONE_APPLE = FoodBuilderHelper.simpleAlwaysEdible(4, 1.2f,
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 20, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 20 * 90, 0), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 10, 0), 1.0f)
     );
     /** 附魔红石苹果 */
@@ -131,12 +133,13 @@ public interface APFoods {
             EffectPair.of(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20 * 210, 0), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 210, 1), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 20 * 210, 0), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 180, 0), 1.0f),
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 120, 1), 1.0f)
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 20 * 210, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20 * 210, 1), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.SATURATION, 20 * 60, 0), 1.0f)
     );
     /** 蜜脾苹果 */
     FoodProperties HONEYCOMB_APPLE = FoodBuilderHelper.simpleAlwaysEdible(6, 1.5f,
-            EffectPair.of(() -> new MobEffectInstance(MobEffects.INVISIBILITY, 20 * 90, 0), 1.0f),
+            EffectPair.of(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 20 * 90, 0), 1.0f),
             EffectPair.of(() -> new MobEffectInstance(MobEffects.REGENERATION, 20 * 10, 0), 1.0f)
     );
     /** 幽匿苹果 */
